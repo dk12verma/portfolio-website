@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Dileep Verma Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+		/* Layout */
+.about-section {
+  background: #0f0f0f;
+  color: #f1f1f1;
+  padding: 60px 10%;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Profile Card */
+.profile-card {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #007bff;
+}
+
+.profile-card h2 {
+  font-size: 22px;
+  margin: 10px 0 5px;
+}
+
+.profile-card .role {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.profile-card .location {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.resume-btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  background: #0056b3;
+}
+
+/* About Card */
+.about-card {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.about-card h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.about-card p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill-card {
+  background: #262626;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #00d4ff;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: white;
+  padding: 60px 10%;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hello {
+  font-size: 1.2rem;
+  color: #facc15; /* Yellow accent */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #facc15; /* Yellow highlight */
+}
+
+.role {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  font-weight: 400;
+  color: #cbd5e1;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #facc15;
+  color: black;
+}
+
+.btn.primary:hover {
+  background: #eab308;
+}
+
+.btn.secondary {
+  border: 2px solid #facc15;
+  color: #facc15;
+}
+
+.btn.secondary:hover {
+  background: #facc15;
+  color: black;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  color: #facc15;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: white;
+}
+
+/* Hero Image */
+.hero-image img {
+  width: 320px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  border: 3px solid #facc15;
+}
+#experience {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.experience-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-card {
+  width: 80%;
+  max-width: 700px;
+  padding: 25px;
+  background: #1f1f1f;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  text-align: left;
+  color: #fff;
+}
+
+.experience-card h3 {
+  color: #facc15; /* yellow highlight */
+  margin-bottom: 10px;
+}
+
+.experience-card h4 {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.experience-card .company {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #aaa;
+}
+
+.experience-card ul {
+  padding-left: 20px;
+}
+/* Section styling */
+#projects {
+  text-align: center;
+  padding: 80px 20px;
+  background: #000; /* Dark background */
+  color: #fff;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #aaa;
+}
+
+/* Project container */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Card */
+.project-card {
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Project image */
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.project-card:hover .project-img {
+  filter: brightness(0.8);
+}
+
+/* Content */
+.project-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.project-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+/* Tech Stack */
+.tech-stack {
+  margin-bottom: 15px;
+}
+
+.tech-stack span {
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin: 0 5px 5px 0;
+}
+
+/* Links */
+.project-links {
+  display: flex;
+  gap: 10px;
+}
+
+.project-links .btn {
+  text-decoration: none;
+  background: #ff4c60;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.project-links .btn:hover {
+  background: #ff1e3c;
+}
+
+/* Contact Section */
+.contact-section {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+/* Cards Grid */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.contact-card {
+  background: #111;
+  padding: 25px;
+  border-radius: 12px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  background: #222;
+}
+
+.contact-card i {
+  font-size: 2rem;
+  color: #f7b731;
+  margin-bottom: 15px;
+}
+
+.contact-card a {
+  color: #f7b731;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #f7b731;
+}
+
+.contact-form button {
+  background: #f7b731;
+  border: none;
+  padding: 12px 20px;
+  color: #000;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ffcc00;
+}
+.ftco-footer {
+  background: #0a0a0a;
+  color: #bbb;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+.ftco-footer a {
+  color: #f4b400; /* yellow highlight */
+  transition: 0.3s;
+}
+
+.ftco-footer a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  margin: 0 8px;
+  font-size: 18px;
+}
+
+.back-to-top {
+  margin-left: 15px;
+  font-size: 13px;
+  color: #f4b400;
+}
+
+	</style>
+
+
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Dileep Verma</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#experience" class="nav-link"><span>Experience</span></a></li>
+					<li class="nav-item"><a href="#projects" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<header class="hero-section">
+  <div class="hero-content">
+    <p class="hello">Hello! 👋</p>
+    <h1>I'm <span class="highlight">Dileep Verma</span></h1>
+    <h3 class="role">Frontend Developer | Angular | React.js</h3>
+    <p class="tagline">I build responsive, user-friendly, and scalable web applications.</p>
+
+    <div class="buttons">
+      <a href="#projects" class="btn primary">My Works</a>
+      <!-- <a href="resume.pdf" class="btn secondary" target="_blank">Download Resume</a> -->
+    </div>
+
+    <div class="social-links">
+      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:287dileepverma@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/image (6).png" alt="Dileep Verma">
+  </div>
+</header>
+ 
+
+<section id="about" class="about-section">
+  <div class="about-container">
+    <!-- Profile Card -->
+    <div class="profile-card">
+      <img src="images/image (6).png" alt="Dileep Verma"  class="profile-pic"></img>
+      <h2>Dileep Verma</h2>
+      <p class="role">Frontend Developer | Angular & React</p>
+      <p class="location">📍 Lucknow, India</p>
+      <a href="images/DILEEP_VERMA (4).pdf" class="resume-btn" download>Download Resume</a>
+    </div>
+
+    <!-- About Me Card -->
+    <div class="about-card">
+      <h2>About Me</h2>
+      <p>
+        Frontend Developer with <b>6 months of professional experience</b> 
+        building responsive and user-centric applications using Angular & React. 
+        Skilled in reusable components, reactive forms, and RESTful API integrations.
+      </p>
+      <p>
+        Passionate about <b>clean code</b>, <b>performance optimization</b>, 
+        and creating seamless user experiences. 
+        Strong understanding of modern JavaScript frameworks & full-stack principles.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <p>Angular, React.js, JavaScript, TypeScript, HTML, CSS</p>
+        </div>
+        <div class="skill-card">
+          <h3>Backend</h3>
+          <p>Node.js, Express.js, .NET Core (Basic)</p>
+        </div>
+        <div class="skill-card">
+          <h3>Database</h3>
+          <p>MySQL, MongoDB, SQL Server</p>
+        </div>
+        <div class="skill-card">
+          <h3>Tools & Others</h3>
+          <p>Git, JIRA, Excel, Google Analytics, SEO</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <section id="experience">
+  <h2 class="section-title">Experience</h2>
+
+  <div class="experience-wrapper">
+    <div class="experience-card">
+      <h3>2025 – Present</h3>
+      <h4>Software Developer Trainee</h4>
+      <p class="company">Amlino Technologies Pvt. Ltd</p>
+      <ul>
+        <li>Built responsive Angular applications, enhancing user experience across devices.</li>
+        <li>Developed reusable UI components with routing, two-way binding & reactive forms.</li>
+        <li>Collaborated with UI/UX teams to deliver seamless and user-friendly features.</li>
+		<li> Collaborated closely with UI/UX designers to translate wireframes into functional interfaces</li>
+		<li>Integrated RESTful APIs and handled data consumption using Angular services and observables</li>
+		 <li>Ensured cross-browser compatibility and responsiveness for mobile-first design</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <p class="section-subtitle">
+    Here are some of my featured projects built with Angular, React, and the MERN stack.
+  </p>
+
+  <div class="projects-container">
+
+    <!-- Project Card -->
+    <div class="project-card">
+      <img src="images/StudyNotion.PNG" alt="StudyNotion Project" class="project-img" />
+      <div class="project-content">
+        <h3>StudyNotion – Full-stack EdTech Platform</h3>
+        <p>A web platform designed to help students access the right study materials easily.</p>
+        <div class="tech-stack">
+          <span>React</span><span>Node.js</span><span>MongoDB</span>
+        </div>
+        <div class="project-links">
+          <a href="https://study-notion-mu-ecru.vercel.app/" target="_blank" class="btn"> Live Demo</a>
+          <a href="https://github.com/dk12verma/StudyNotion" target="_blank" class="btn"> GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card -->
+    <div class="project-card">
+      <img src="images/study-sync.PNG" alt="StudySync Project" class="project-img" />
+      <div class="project-content">
+        <h3>StudySync – AI-powered Student Platform</h3>
+        <p>A collaborative platform helping students discover personalized study resources.</p>
+        <div class="tech-stack">
+          <span>Angular</span><span>TypeScript</span><span>Firebase</span>
+        </div>
+        <div class="project-links">
+          <a href="https://study-sync-azure-kappa.vercel.app/" target="_blank" class="btn"> Live Demo</a>
+          <a href="https://github.com/dk12verma/Study-Sync" target="_blank" class="btn"> GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card -->
+    <div class="project-card">
+      <img src="images/MoiveMina.PNG" alt="MovieMina Project" class="project-img" />
+      <div class="project-content">
+        <h3>MovieMina – Movie Discovery Web App</h3>
+        <p>A responsive web app to explore and discover movies with React & Chakra UI.</p>
+        <div class="tech-stack">
+          <span>React</span><span>Chakra UI</span><span>TMDB API</span>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank" class="btn"> Live Demo</a>
+          <a href="#" target="_blank" class="btn"> GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+	 
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <h2 class="section-title">Contact Me</h2>
+  <p class="section-subtitle">Let’s connect! Below are my details or send me a direct message.</p>
+
+  <div class="contact-cards">
+    <!-- Address -->
+    <div class="contact-card">
+      <i class="fas fa-map-marker-alt"></i>
+      <h3>Address</h3>
+      <p>Lucknow, India</p>
+    </div>
+
+    <!-- Phone -->
+    <div class="contact-card">
+      <i class="fas fa-phone"></i>
+      <h3>Contact Number</h3>
+      <p><a href="tel:+919555462085">+91 9555 4620 85</a></p>
+    </div>
+
+    <!-- Email -->
+    <div class="contact-card">
+      <i class="fas fa-envelope"></i>
+      <h3>Email Address</h3>
+      <p><a href="mailto:287dileepverma@gmail.com">287dileepverma@gmail.com</a></p>
+    </div>
+
+    <!-- Resume -->
+    <div class="contact-card">
+      <i class="fas fa-file-download"></i>
+      <h3>Download Resume</h3>
+      <p><a href="images/DILEEP_VERMA (4).pdf" download>Click Here</a></p>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <!-- <div class="contact-form">
+    <h3>Send Me a Message</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div> -->
+</section>
+
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+	
+<footer class="ftco-footer ftco-section">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Left Side -->
+      <div class="col-md-6 text-md-left text-center mb-3 mb-md-0">
+        <p>
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> 
+          All rights reserved | Made with 
+          <i class="icon-heart color-danger" aria-hidden="true"></i> 
+          by <a href="#" target="_blank">Dileep Verma</a>
+        </p>
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-md-6 text-md-right text-center">
+        <div class="social-icons">
+          <a href="https://github.com/dk12verma" target="_blank"><span class="icon-github"></span></a>
+          <a href="https://www.linkedin.com/in/dileep-verma/" target="_blank"><span class="icon-linkedin"></span></a>
+          <a href="mailto:287dileepverma@gmail.com"><span class="icon-envelope"></span></a>
+          <a href="#top" class="back-to-top">↑ Top</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+	 
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
